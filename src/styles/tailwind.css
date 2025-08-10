@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --glass: rgba(255,255,255,0.75);
+}
+
+body{
+  @apply bg-white text-ink antialiased;
+}
+
+/* small helpers */
+.card-bg{ background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(250,250,255,0.85)); backdrop-filter: blur(8px); }
