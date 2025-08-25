@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahata Lakshmi Ummadi | AI Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">Mahata Lakshmi Ummadi</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#ai-portfolio" class="text-gray-600 hover:text-indigo-600 transition duration-300">AI Portfolio</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#resume" class="text-gray-600 hover:text-indigo-600 transition duration-300">Resume</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition duration-300">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#ai-portfolio" class="block py-2 text-gray-600 hover:text-indigo-600">AI Portfolio</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
+            <a href="#resume" class="block py-2 text-gray-600 hover:text-indigo-600">Resume</a>
+            <a href="#experience" class="block py-2 text-gray-600 hover:text-indigo-600">Experience</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600">Projects</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- AI Portfolio Section -->
+        <section id="ai-portfolio" class="container mx-auto px-6 py-20 text-center">
+            <img src="https://placehold.co/150x150/E2E8F0/4A5568?text=MLU" alt="Mahata Lakshmi Ummadi" class="w-32 h-32 rounded-full mx-auto mb-4">
+            <p class="text-xl text-gray-600">Hey, I'm Mahata Lakshmi 👋</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight mt-2">
+                AI Portfolio
+            </h1>
+            <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+                Ask my AI assistant anything about my skills, projects, and experience.
+            </p>
+
+            <!-- AI Input Form -->
+            <div class="mt-10 max-w-2xl mx-auto">
+                <form id="ai-form" class="relative">
+                    <input type="text" id="ai-input" placeholder="e.g., What are your technical skills?" class="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-full focus:outline-none focus:ring-4 focus:ring-indigo-200 transition duration-300 shadow-sm">
+                    <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 bg-indigo-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-700 transition duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Category Buttons -->
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+                <button class="category-btn bg-white border border-gray-200 px-5 py-2 rounded-full hover:bg-gray-100 transition duration-300" data-query="Tell me about Mahata">👩‍💻 Me</button>
+                <button class="category-btn bg-white border border-gray-200 px-5 py-2 rounded-full hover:bg-gray-100 transition duration-300" data-query="What are her main projects?">💼 Projects</button>
+                <button class="category-btn bg-white border border-gray-200 px-5 py-2 rounded-full hover:bg-gray-100 transition duration-300" data-query="What are her technical skills?">🛠️ Skills</button>
+                <button class="category-btn bg-white border border-gray-200 px-5 py-2 rounded-full hover:bg-gray-100 transition duration-300" data-query="How can I contact her?">📞 Contact</button>
+            </div>
+
+            <!-- Chat Display Area -->
+            <div id="chat-display" class="mt-12 max-w-3xl mx-auto text-left space-y-4 chat-display">
+                <!-- Chat messages will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="bg-white py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+                <div class="max-w-4xl mx-auto text-lg text-gray-600 leading-relaxed text-center">
+                    <p>I am a B.Tech student at Vellore Institute of Technology, currently ranked 3rd in the Computer Science department with a specialization in AI & Machine Learning. My coursework in Data Structures, Machine Learning, and REST API Development has provided me with a strong foundation. I have hands-on experience in building scalable AI applications, integrating Large Language Models (LLMs), and developing robust backend systems. I thrive in fast-paced, high-impact environments and am dedicated to writing clean, efficient code.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" class="py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">My Resume</h2>
+                <div class="text-center mb-8">
+                    <a href="Mahata_Lakshmi_Resume.pdf" download class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg">
+                        Download Resume
+                    </a>
+                </div>
+                <div class="max-w-5xl mx-auto border-4 border-gray-200 rounded-lg overflow-hidden shadow-2xl">
+                    <iframe src="Mahata_Lakshmi_Resume.pdf" class="w-full h-[800px]" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="bg-white py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">Work Experience</h2>
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
+                    
+                    <!-- Walmart -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-indigo-600 rounded-full mt-1.5 ring-4 ring-white"></div>
+                        <div class="w-full md:w-1/2 md:pr-8 md:text-right">
+                            <p class="text-gray-500">Sept 2022 - Present</p>
+                            <h3 class="text-2xl font-bold">Walmart Global Tech</h3>
+                            <p class="italic text-gray-600">Software Development Engineer Intern</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 w-full md:w-1/2 md:pl-8 md:ml-auto">
+                            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Designed and integrated Model Context Protocol (MCP) for AI system interoperability.</li>
+                                    <li>Built a production-grade Order Management System (OMS) chatbot, improving efficiency by 20%.</li>
+                                    <li>Collaborated in an Agile environment to deliver scalable backend APIs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brain-cade -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-indigo-600 rounded-full mt-1.5 ring-4 ring-white"></div>
+                        <div class="w-full md:w-1/2 md:pl-8 md:ml-auto md:text-left">
+                            <p class="text-gray-500 md:text-right">Sept 2023</p>
+                            <h3 class="text-2xl font-bold">Brain-cade Technologies Pvt. Ltd.</h3>
+                            <p class="italic text-gray-600">AI Engineer Intern</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 w-full md:w-1/2 md:pr-8 md:mr-auto">
+                             <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Tested and analyzed Large Language Models with 50+ parameters for game development.</li>
+                                    <li>Implemented LangChain-based chat sequence management, improving response accuracy by 15%.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Lost Child Detection</h3>
+                            <p class="text-gray-600 mb-4">A face recognition system trained on 10,000 images achieving 98% accuracy for law enforcement assistance.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Computer Vision</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Foot Ulcer Segmentation</h3>
+                            <p class="text-gray-600 mb-4">Ensemble segmentation model (Unet, Unet++, SegNet) achieving 97% accuracy and 0.8 Dice score.</p>
+                             <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Deep Learning</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">PyTorch</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">IoT Pattern Analysis</h3>
+                            <p class="text-gray-600 mb-4">Used ESP32 + MPU9250 sensors to collect and visualize data via Django-based dashboards, achieving 80% accuracy.</p>
+                             <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">IoT</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Django</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="bg-white py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-600 mb-8 max-w-xl mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out.</p>
+                <a href="mailto:mahata2657@gmail.com" class="bg-indigo-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg text-lg">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Mahata Lakshmi Ummadi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="ai.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

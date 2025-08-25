@@ -1,0 +1,21 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar for a better look */
+.chat-display::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-display::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-display::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.chat-display::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
